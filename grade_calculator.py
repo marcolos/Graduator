@@ -20,7 +20,7 @@ class grade_calculator(object):
     def compute_grade(self):
         #voto in 110
         try:
-            v_110 = round(((self.media_esami * self.cfu_esami) + (self.voto_tesi * (self.cfu_totali - self.cfu_esami))) / self.cfu_totali * scala)
+            v_110 = ((self.media_esami * self.cfu_esami) + (self.voto_tesi * (self.cfu_totali - self.cfu_esami))) / self.cfu_totali * scala
 
             delta_1 = 0 if v_110 <= 90 else 4 if v_110 > 106 else (v_110 - 90) / 4 
 
